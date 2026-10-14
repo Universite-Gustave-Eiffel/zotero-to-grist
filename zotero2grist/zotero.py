@@ -222,7 +222,12 @@ def parse_publications(
                     [i for i in items if {"tag": "Cerema"} in i["tags"]]
                 ),
                 "Nombre_Uni_Eiffel": len(
-                    [i for i in items if {"tag": "Uni Eiffel"} in i["tags"]]
+                    [
+                        i
+                        for i in items
+                        if {"tag": "Uni Eiffel"} in i["tags"]
+                        or {"tag": "Ifsttar"} in i["tags"]
+                    ]
                 ),
                 "Zotero_Key": sub_collection["key"],
             }
